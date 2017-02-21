@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CLAPP Prototype</string>
-    <string-array name="header_Title">
+    <string-array name="header_Title_English">
 
         <item>Lets go eat</item>
         <item>I need Money</item>
@@ -12,6 +12,62 @@
         <item>Can i have some jam?</item>
         <item>Yes we can</item>
     </string-array>
+
+    <string-array name="header_Title_Spanish">
+
+        <item>Vamos a comer</item>
+        <item>Necesito dinero</item>
+        <item>Que es eso</item>
+        <item>Te amo</item>
+        <item>Hola Mundo</item>
+        <item>Curacao</item>
+        <item>Ese pan es sabroso</item>
+        <item>¿Puedo tener un poco de mermelada?</item>
+        <item>Si podemos</item>
+    </string-array>
+
+    <string-array name="header_Title_France">
+
+        <item>Allons manger</item>
+        <item>J ai besoin d argent</item>
+        <item>Qu st-ce que c est</item>
+        <item>je t aime</item>
+        <item>Bonjour le monde</item>
+        <item>Curacao</item>
+        <item>Ce pain est savoureux</item>
+        <item>Puis-je avoir un peu de confiture?</item>
+        <item>Oui nous pouvons</item>
+    </string-array>
+
+    <string-array name="header_Title_Chinese">
+
+        <item>我们可以</item>
+        <item>我需要钱</item>
+        <item>那是什么</item>
+        <item>我爱你</item>
+        <item>你好，世界</item>
+        <item>库拉索</item>
+        <item>那面包是美味的</item>
+        <item>我可以有一些果酱吗？</item>
+        <item>我们可以</item>
+    </string-array>
+
+    <string-array name="header_Title_Dutch">
+
+        <item>Laten we gaan eten</item>
+        <item>Ik heb geld nodig</item>
+        <item>Wat is dat</item>
+        <item>Ik hou van je</item>
+        <item>Hallo Wereld</item>
+        <item>Curacao</item>
+        <item>Dat brood is Tasty</item>
+        <item>Kan ik heb een aantal jam?</item>
+        <item>Ja dat kunnen we</item>
+    </string-array>
+
+
+
+
 
     <string-array name="header1">
         <item>Ban come</item>
