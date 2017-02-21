@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">CLAPP Prototype</string>
+    <string-array name="header_Title">
+
+        <item>Lets go eat</item>
+        <item>I need Money</item>
+        <item>What is that</item>
+        <item>I love you</item>
+        <item>Hello World</item>
+        <item>Curacao</item>
+        <item>That bread is Tasty</item>
+        <item>Can i have some jam?</item>
+        <item>Yes we can</item>
+    </string-array>
+
+    <string-array name="header1">
+        <item>Ban come</item>
+    </string-array>
+
+    <string-array name="header2">
+        <item>Mi mester di sen</item>
+    </string-array>
+
+    <string-array name="header3">
+        <item>Ki e koi ta</item>
+    </string-array>
+
+    <string-array name="header4">
+        <item>Mi stimabu</item>
+    </string-array>
+
+    <string-array name="header5">
+        <item>Konta mundu</item>
+    </string-array>
+
+    <string-array name="header6">
+        <item>Korsou</item>
+    </string-array>
+
+    <string-array name="header7">
+        <item>E pan ei ta dushi</item>
+    </string-array>
+
+    <string-array name="header8">
+        <item>Mi por hanja un tiki djem?</item>
+    </string-array>
+
+    <string-array name="header9">
+        <item>Si nos por</item>
+    </string-array>
+    
+    
+</resources>

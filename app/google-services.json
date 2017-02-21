@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "806598644037",
+    "project_id": "clapp-prototype"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806598644037:android:c0a100062a6a1891",
+        "android_client_info": {
+          "package_name": "com.example.unity.clappprototype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806598644037-cjla9kf8nrnupkjf4qi3p4dc37h3sgv1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unity.clappprototype",
+            "certificate_hash": "7522B7A25327AE7584B88CF9399AD8DA134CE7CF"
+          }
+        },
+        {
+          "client_id": "806598644037-5e3t1sqoth5vbi3kuk94ielhfv0fqqg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdTVD-DmW6zku4l0hKIUVl4xUKYvmNuBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

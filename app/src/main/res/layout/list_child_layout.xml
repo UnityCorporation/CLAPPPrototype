@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/childItem"
+        android:textSize="24sp"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_btn_speak_now"
+                android:id="@+id/imageView5"
+                android:padding="2dp" />
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:srcCompat="@drawable/volume_icon_blue"
+                android:id="@+id/imageView11"
+                android:padding="2dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal"
+                android:id="@+id/imageView"
+                android:paddingLeft="40dp" />
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="38dp"
+                app:srcCompat="@drawable/facebook_icon"
+                android:id="@+id/imageView2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star"
+                android:id="@+id/imageView10"
+                android:paddingLeft="50dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star"
+                android:id="@+id/imageView9" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star"
+                android:id="@+id/imageView8" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
