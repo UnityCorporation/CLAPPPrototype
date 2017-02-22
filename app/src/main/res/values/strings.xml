@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CLAPP Prototype</string>
+    <string name="action_menu_settings">Change Language</string>
+    <string name="action_logout">Logout</string>
     <string-array name="header_Title_English">
 
         <item>Lets go eat</item>

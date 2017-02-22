@@ -1,9 +1,14 @@
 package com.example.unity.clappprototype;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 
@@ -15,7 +20,7 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity implements MyDialog.Communicator{
     private int lastExpandedPosition = -1;
     private ExpandableListView exp;
-
+    private boolean showDialog= true;
     List<String> Headings = new ArrayList<String>();
     List<String> H1= new ArrayList<String>();
     List<String> H2 = new ArrayList<String>();
@@ -34,13 +39,22 @@ public class HomeActivity extends AppCompatActivity implements MyDialog.Communic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar);
         exp = (ExpandableListView) findViewById(R.id.ExpListView);
 
-        Log.d("Testing RadioButton", "testing");
-        ShowDialogF(null);
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
 
+            if (extras.getBoolean("IsLoggedIn")) {
 
+                if(showDialog){
+
+                    ShowDialogF(null);
+                    showDialog = false;
+                }
+            }
+        }
 
         exp.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
@@ -53,20 +67,17 @@ public class HomeActivity extends AppCompatActivity implements MyDialog.Communic
                 lastExpandedPosition = groupPosition;
             }
         });
-
-
-
     }
 
-public void ShowDialogF(View v){
 
+    public void ShowDialogF(View v){
     FragmentManager manager = getFragmentManager();
     MyDialog myDialog = new MyDialog();
     myDialog.show(manager, "Choose Language");
-
 }
 
-  private void populateLanguageWords_English(){
+
+    private void populateLanguageWords_English(){
 
 
       HeadingItems = getResources().getStringArray(R.array.header_Title_English);
@@ -145,7 +156,6 @@ public void ShowDialogF(View v){
       exp.setAdapter(Myadapter);
 
   }
-
     private void populateLanguageWords_Spanish(){
 
 
@@ -225,7 +235,6 @@ public void ShowDialogF(View v){
         exp.setAdapter(Myadapter);
 
     }
-
     private void populateLanguageWords_France(){
 
 
@@ -305,7 +314,6 @@ public void ShowDialogF(View v){
         exp.setAdapter(Myadapter);
 
     }
-
     private void populateLanguageWords_Chinese(){
 
 
@@ -385,7 +393,6 @@ public void ShowDialogF(View v){
         exp.setAdapter(Myadapter);
 
     }
-
     private void populateLanguageWords_Dutch(){
 
 
@@ -493,5 +500,32 @@ public void ShowDialogF(View v){
                 break;
         }
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mInflater = getMenuInflater();
+        mInflater.inflate(R.menu.menu_bar,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()== R.id.action_settings){
+            Intent MainPage = new Intent(HomeActivity.this, HomeActivity.class);
+            MainPage.putExtra("IsLoggedIn", true);
+            HomeActivity.this.startActivity(MainPage);
+            finish();
+        }
+
+        if(item.getItemId() == R.id.actionLogout){
+            Intent MainPage = new Intent(HomeActivity.this, LoginActivity.class);
+            MainPage.putExtra("IsLoggedIn", false);
+            HomeActivity.this.startActivity(MainPage);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

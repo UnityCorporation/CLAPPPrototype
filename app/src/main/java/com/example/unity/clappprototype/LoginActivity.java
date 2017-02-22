@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar4);
+        setSupportActionBar(toolbar);
 
         final EditText LUN = (EditText) findViewById(R.id.ETLoginUserName);
         final EditText LPW = (EditText) findViewById(R.id.ETLoginPassword);
@@ -55,7 +58,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private void NormalLogIn(){
         Intent MainPage = new Intent(LoginActivity.this, HomeActivity.class);
+        MainPage.putExtra("IsLoggedIn", true);
         LoginActivity.this.startActivity(MainPage);
+        finish();
     }
 
     private void RegisterHere(){
@@ -67,7 +72,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private void HandleResult(GoogleSignInResult Result){
         if(Result.isSuccess()) {
             Intent MainPage = new Intent(LoginActivity.this, HomeActivity.class);
+            MainPage.putExtra("IsLoggedIn", true);
             LoginActivity.this.startActivity(MainPage);
+            finish();
         }
     }
 
